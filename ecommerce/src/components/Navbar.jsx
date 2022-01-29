@@ -10,6 +10,7 @@ import ShoppingCartOutlined from '@material-ui/icons/ShoppingCartOutlined';
 
 const Container = styled.div`
   height: 60px;
+  border-bottom: 0.5px solid lightgray;
 `
 
 const Wrapper = styled.div`
@@ -28,6 +29,11 @@ const Left = styled.div`
 const MobileMenuIcon = styled.div`
   cursor: pointer;
   margin-right: 18px;
+  display: none;
+
+  @media (max-width: 991.98px) {
+    display: block;
+  }
 `
 
 const Language = styled.span`
@@ -42,10 +48,17 @@ const SearchContainer = styled.div`
   align-items: center;
   margin-left: 25px;
   padding: 5px;
+
+  @media (max-width: 991.98px) {
+    display: none;
+  }
 `
 
 const Input = styled.input`
   border: none;
+  &:focus {
+    outline: none;
+  }
 `
 
 const Center = styled.div`
@@ -68,6 +81,10 @@ const MenuItem = styled.div`
   font-size: 14px;
   cursor: pointer;
   margin-left: 25px;
+  transition: 0.4s;
+  &:hover {
+    color: #ea398c;
+  }
 `
 
 
@@ -81,7 +98,7 @@ const Navbar = () => {
           </MobileMenuIcon>
           <Language>EN</Language>
           <SearchContainer>
-            <Input />
+            <Input placeholder="Search" />
             <SearchIcon />
           </SearchContainer>
         </Left>
