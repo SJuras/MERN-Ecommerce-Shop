@@ -31,12 +31,17 @@ const Arrow = styled.div`
   cursor: pointer;
   opacity: 0.5;
   z-index: 2;
+  transition: 0.3s;
+  &:hover {
+    background-color: #ea398c;
+  }
 `
 
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
   transform: translateX(${props => props.slideIndex * -100}vw);
+  transition: all 1.5s ease;
 `
 
 const Slide = styled.div`
@@ -81,7 +86,7 @@ const Desc2 = styled.p`
 const Button = styled.button`
   font-family: 'CaviarBold', sans-serif;
   cursor: pointer;
-  padding: 10px;
+  padding: 16px;
   font-size: 20px;
   background-color: #ea398c;
   color: #fff;

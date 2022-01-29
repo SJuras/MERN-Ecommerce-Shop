@@ -26,3 +26,22 @@ export const sliderItems = [
     image: Bg1
   }
 ];
+
+
+export const categories = [
+  {
+    id: 1,
+    img: "",
+    title: "T-Shirts",
+  },
+  {
+    id: 2,
+    img: "",
+    title: "Long Sleeves",
+  },
+  {
+    id: 3,
+    img: "",
+    title: "Jackets",
+  },
+];
